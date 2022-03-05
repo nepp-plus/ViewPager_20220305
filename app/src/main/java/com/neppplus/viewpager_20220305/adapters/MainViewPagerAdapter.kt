@@ -31,14 +31,10 @@ class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
 
-        if (position == 0) {
-            return MyNameFragment()
-        }
-        else if (position == 1) {
-            return MyInfoFragment()
-        }
-        else {
-            return HelloFragment()
+        return when(position) {
+            0 -> MyNameFragment()
+            1 -> MyInfoFragment()
+            else -> HelloFragment()
         }
 
     }
