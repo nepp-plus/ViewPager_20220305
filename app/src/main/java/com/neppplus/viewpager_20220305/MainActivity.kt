@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         mainViewPager.offscreenPageLimit = 3
 
 
+//        탭레이아웃 / 뷰페이져 연결
+        mainTabLayout.setupWithViewPager(mainViewPager)
+
+
     }
 
 }
